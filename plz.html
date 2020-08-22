@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dogstudio</title>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="plz.css">
+</head>
+<body>
+    
+
+        <section class="container">
+            <div class="content">
+                <!-- 1 -->
+                <h1>Hi, Dogstudio!</h1>
+                <p style="font-size:85%;"><em>(scroll to begin)</em></p>
+            </div>
+        </section>
+
+    </body>
+    </html>
+
+    <section class="container">
+        <div class="content">
+            <!-- 2 -->
+            <p><a href="https://www.keegan-morris.com/" target="_blank">Keegan Morris</a> here!</p><p>I just submitted my application for to work at Dogstudio as <a href="https://dogstudio.co/careers/interactive-producer/" target="_blank">Interactive Producer</a>.</p>
+        </div>
+    </section>
+
+    </body>
+    </html>
+
+    <section class="container">
+        <div class="content">
+            <!-- 3 -->
+            <p>Instead of a cover letter,</br>I decided to show you my Adobe Premiere Pro, Adobe Photoshop,</br>Adobe After Effects, HTML, and CSS skills</br>in the form of this story...</p>
+        </div>
+    </section>
+
+    </body>
+    </html>
+
+    <section class="container">
+        <div class="content">
+            <!-- 4 -->
+            <p>But first, a brief introduction...</p>
+        </div>
+    </section>
+
+    </body>
+    </html>
+
+    <section class="container">
+        <div class="content">
+            <!-- 5 -->
+            <p>Remember these?</p>
+        </div>
+    </section>
+
+    </body>
+    </html>
+
+    <section class="container">
+        <div class="content">
+            <!-- 6 -->
+            <p>If you're like me,<br>you spent a lot of time in elementary school making them</p>
+        </div>
+    </section>
+
+    </body>
+    </html>
+
+    <section class="container">
+        <div class="content">
+            <!-- 7 -->
+            <p>In retrospect, they were some of my first forays into combining timing and visuals for storytelling.</p>
+        </div>
+    </section>
+
+    </body>
+    </html>
+
+    <section class="container">
+        <div class="content">
+            <!-- 8 -->
+            <p>I remember the magic of finishing a flipbook</br>and seeing your ideas <strong><em>actually work</em></strong> as you intended.</p>
+        </div>
+    </section>
+
+    </body>
+    </html>
+
+    <section class="container">
+        <div class="content">
+            <!-- 9 -->
+            <p>It's a feeling that still comes to me sometimes when I'm working on a project.</p>
+        </div>
+    </section>
+
+    </body>
+    </html>
+
+    <section class="container">
+        <div class="content">
+            <!-- 10 -->
+            <p>And that is part of why I want to work at Dogstudio:</br>the thrill of making "good shit..."</p>
+        </div>
+    </section>
+
+    </body>
+    </html>
+
+    <section class="container">
+        <div class="content">
+            <!-- 11 -->
+            <p>and what better way to show you my eagerness to contribute to your "good shit"</br>than by showcasing my own "good shit?"</p>
+        </div>
+    </section>
+
+    </body>
+    </html>
+
+    <section class="container">
+        <div class="content">
+            <!-- 12 -->
+            <p>And of course, it has to feature a dog.</br>So here's my scrolling short story, <strong><em>FETCH: A Simple Story of a Silly Dog</em></strong>.</p>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="content">
+            <!-- 13 -->
+            <p>I hope you enjoy!</p>
+        </div>
+    </section>
+
+    <div id="set-height"></div>
+
+    <video id="v0" tabindex="0", autobuffer preload>
+        <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' src="plz.mp4"></source>
+    </video>
+
+    <script>
+
+
+        var frameNumber = 0, // start video at frame 0
+            // lower numbers = faster playback
+            playbackConst = 1000, 
+            // get page height from video duration
+            setHeight = document.getElementById("set-height"), 
+            // select video element         
+            vid = document.getElementById('v0'); 
+            // var vid = $('#v0')[0]; // jquery option
+
+        // dynamically set the page height according to video length
+        vid.addEventListener('loadedmetadata', function() {
+        setHeight.style.height = Math.floor(vid.duration) * playbackConst + "px";
+        });
+
+
+        // Use requestAnimationFrame for smooth playback
+        function scrollPlay(){  
+        var frameNumber  = window.pageYOffset/playbackConst;
+        vid.currentTime  = frameNumber;
+        window.requestAnimationFrame(scrollPlay);
+        }
+
+        window.requestAnimationFrame(scrollPlay);
+
+    </script>
+
+</body>
+</html>
+
